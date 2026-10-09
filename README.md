@@ -1,16 +1,35 @@
-# React + Vite
+# Malik Asad | Web Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! I am a Computer Science graduate specializing in Artificial Intelligence and currently working as a Web Developer Intern at NUMS.
 
-Currently, two official plugins are available:
+## About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 💻 Interested in Web Development and Software Engineering
+* 🤖 Knowledge of Artificial Intelligence and Machine Learning
+* 🌐 Building responsive and user-friendly web applications
+* 🚀 Continuously learning and improving my technical skills
 
-## React Compiler
+## Skills
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** HTML, CSS, JavaScript, React, Bootstrap
+* **Programming:** Python
+* **AI/ML:** Machine Learning fundamentals
+* **Tools:** Git, GitHub, VS Code
 
-## Expanding the ESLint configuration
+## Featured Projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Universal Health System** — Healthcare management system with patient, doctor, and admin portals.
+* **V-Fit AR** — Augmented reality-based project.
+* **E-commerce Chatbot** — Chatbot project for e-commerce assistance.
+* **Multiclass Emotion Classifier** — AI-based emotion classification project.
+
+## Live Portfolio
+
+🌐 https://malik-asad-portfolio.vercel.app/
+
+## Connect With Me
+
+* **LinkedIn:** https://www.linkedin.com/in/malikasad7/
+* **GitHub:** https://github.com/malikasad7
+
+Thanks for visiting my portfolio!
