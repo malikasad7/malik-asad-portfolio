@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
@@ -52,22 +53,63 @@ function Contact() {
   return (
     <section id="contact" className="contact-section py-5">
       <div className="container py-5">
+
         <div className="text-center mb-5">
-          <h2 className="section-title">Let's Connect</h2>
+          <p className="contact-eyebrow">LET'S TALK</p>
+
+          <h2 className="section-title contact-heading">
+            Let's <span>Connect</span>
+          </h2>
+
           <div className="section-line mx-auto"></div>
-          <p className="section-description">
-            Have a project or opportunity in mind? Send me a message.
+
+          <p className="contact-description">
+            Have an idea, project, or opportunity? I'd love to hear from you.
           </p>
         </div>
 
-        <div className="contact-card mx-auto">
+        <div className="contact-card contact-modern-card mx-auto">
           <div className="contact-intro">
             <span className="contact-label">GET IN TOUCH</span>
-            <h3>Let's work together.</h3>
+
+            <h3>
+              Let's build something <span>great.</span>
+            </h3>
+
             <p>
-              I'm interested in web development, AI projects, and
-              opportunities to build useful digital experiences.
+              I'm interested in web development, Artificial Intelligence,
+              and opportunities to create useful digital experiences.
+              Send me a message and let's discuss your idea.
             </p>
+
+            <div className="contact-info-item">
+              <div className="contact-info-icon">@</div>
+              <div>
+                <span>Email me at</span>
+                <a href="mailto:malikasad8586@gmail.com">
+                  malikasad8586@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-info-item">
+              <div className="contact-info-icon">↗</div>
+              <div>
+                <span>Find me on</span>
+                <a
+                  href="https://www.linkedin.com/in/malikasad7/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-availability">
+              <span className="contact-availability-dot"></span>
+              Open to opportunities and collaboration
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="contact-form">
@@ -75,6 +117,7 @@ function Contact() {
               <label htmlFor="contact-name" className="contact-field-label">
                 Your Name
               </label>
+
               <input
                 id="contact-name"
                 type="text"
@@ -90,8 +133,9 @@ function Contact() {
 
             <div className="mb-4">
               <label htmlFor="contact-email" className="contact-field-label">
-                Your Email
+                Email Address
               </label>
+
               <input
                 id="contact-email"
                 type="email"
@@ -112,10 +156,11 @@ function Contact() {
               >
                 Your Message
               </label>
+
               <textarea
                 id="contact-message"
                 name="message"
-                placeholder="Tell me about your idea..."
+                placeholder="Tell me about your project or idea..."
                 value={formData.message}
                 onChange={handleChange}
                 className="form-control contact-input"
@@ -148,6 +193,7 @@ function Contact() {
             )}
           </form>
         </div>
+
       </div>
     </section>
   )
