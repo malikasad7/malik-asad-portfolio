@@ -1,9 +1,67 @@
+import { useEffect, useState } from 'react'
+
 function Navbar() {
+  const [activeSection, setActiveSection] = useState('home')
+
+  const sections = [
+    'home',
+    'about',
+    'skills',
+    'experience',
+    'education',
+    'projects',
+    'contact',
+  ]
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'education', label: 'Education' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = 'home'
+
+      sections.forEach((id) => {
+        const section = document.getElementById(id)
+
+        if (section && section.getBoundingClientRect().top <= 150) {
+          currentSection = id
+        }
+      })
+
+      setActiveSection(currentSection)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const closeMobileMenu = () => {
+    const menu = document.getElementById('navbarNav')
+
+    if (menu && menu.classList.contains('show')) {
+      menu.classList.remove('show')
+    }
+  }
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
       <div className="container">
-
-        <a className="navbar-brand fw-bold" href="#home">
+        <a
+          className="navbar-brand fw-bold"
+          href="#home"
+          onClick={closeMobileMenu}
+        >
           Malik Asad
         </a>
 
@@ -20,53 +78,21 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-
           <ul className="navbar-nav ms-auto">
-
-            <li className="nav-item">
-              <a className="nav-link" href="#home">
-                Home
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#about">
-                About
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#skills">
-                Skills
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#experience">
-                Experience
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#education">
-                Education
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#projects">
-                Projects
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">
-                Contact
-              </a>
-            </li>
-
+            {navItems.map((item) => (
+              <li className="nav-item" key={item.id}>
+                <a
+                  className={`nav-link ${
+                    activeSection === item.id ? 'active' : ''
+                  }`}
+                  href={`#${item.id}`}
+                  onClick={closeMobileMenu}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
-
         </div>
       </div>
     </nav>
