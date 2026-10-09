@@ -5,28 +5,28 @@ function Projects() {
       description:
         'A full-stack healthcare management system with patient, doctor and admin portals, appointment management, medical records and AI-based health features.',
       technologies: 'React • Node.js • MySQL • Prisma • AI',
-      github: 'https://github.com/malikasad7ya/Universal-Health-System'
+      github: 'https://github.com/malikasad7/Universal-Health-System'
     },
     {
       title: 'V-fit AR',
       description:
         'An AI-powered virtual try-on application using real-time body tracking, computer vision and gesture-based interaction.',
       technologies: 'React • JavaScript • MediaPipe • Three.js • ONNX',
-      github: 'https://github.com/malikasad7ya/V-fit-AR-based-real-time-tryout'
+      github: 'https://github.com/malikasad7/V-fit-AR-based-real-time-tryout'
     },
     {
       title: 'E-commerce Chatbot',
       description:
         'A modern e-commerce application with an integrated conversational chatbot designed to assist users with product discovery.',
       technologies: 'Next.js • React • TypeScript • Tailwind CSS',
-      github: 'https://github.com/malikasad7ya/e-commerce-chatbot'
+      github: 'https://github.com/malikasad7/e-commerce-chatbot'
     },
     {
       title: 'Multiclass Emotion Classifier',
       description:
         'A machine learning project using fine-tuned RoBERTa to classify text into six different emotions.',
       technologies: 'Python • NLP • RoBERTa • Machine Learning',
-      github: 'https://github.com/malikasad7ya/multiclass-emotion-classifier'
+      github: 'https://github.com/malikasad7/multiclass-emotion-classifier'
     }
   ]
 

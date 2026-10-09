@@ -505,6 +505,31 @@ body {
   color: #888;
 }
 
+/* Hero Buttons Layout */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.hero-buttons .btn {
+  margin: 0 !important;
+  padding: 12px 20px;
+}
+
+@media (max-width: 576px) {
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
 /* Experience */
 
 .experience-section {

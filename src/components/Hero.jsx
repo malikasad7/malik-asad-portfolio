@@ -23,7 +23,7 @@ function Hero() {
               and have a strong interest in Artificial Intelligence.
             </p>
 
-            <div className="mt-4">
+            <div className="hero-buttons">
               <a href="#projects" className="btn btn-dark me-3">
                 View My Work
               </a>
@@ -39,6 +39,13 @@ function Hero() {
                                                       >
                      Download CV
                   </a>
+
+                  <a
+  href="mailto:YOUR-EMAIL@example.com"
+  className="btn btn-dark mt-3 ms-2"
+>
+  Email Me
+</a>
             </div>
 
             <div className="hero-socials mt-4">
