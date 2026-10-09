@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://malik-asad-portfolio.vercel.app/sitemap.xml
