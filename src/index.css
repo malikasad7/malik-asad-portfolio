@@ -1820,3 +1820,36 @@ img {
     transition: none;
   }
 }
+
+/* Back To Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: linear-gradient(135deg, #5478ff, #a855f7);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(84, 120, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.4);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}

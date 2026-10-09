@@ -10,6 +10,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
+import BackToTop from './components/BackToTop'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -74,6 +75,8 @@ function App() {
         <Contact />
         <Footer />
       </div>
+
+      <BackToTop />
     </>
   )
 }
