@@ -1678,3 +1678,145 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Professional Loading Screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080d1a;
+  color: #ffffff;
+  animation: loaderFadeIn 0.4s ease;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #5478ff, #a855f7);
+  color: white;
+  font-size: 42px;
+  font-weight: 800;
+  animation: logoPulse 1s ease-in-out infinite alternate;
+}
+
+.loader-content h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.loader-content p {
+  color: #aab4cc;
+  font-size: 14px;
+}
+
+.loader-spinner {
+  width: 35px;
+  height: 35px;
+  margin: 20px auto 0;
+  border: 3px solid #29324a;
+  border-top-color: #8b5cf6;
+  border-right-color: #5478ff;
+  border-radius: 50%;
+  animation: loaderSpin 0.8s linear infinite;
+}
+
+.portfolio-hidden {
+  visibility: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.portfolio-visible {
+  animation: portfolioAppear 0.5s ease;
+}
+
+@keyframes loaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoPulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes loaderFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes portfolioAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen,
+  .loader-logo,
+  .loader-spinner,
+  .portfolio-visible {
+    animation: none;
+  }
+}
+
+/* Custom Cursor Glow Effect */
+.custom-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    circle,
+    rgba(84, 120, 255, 0.12) 0%,
+    rgba(168, 85, 247, 0.07) 35%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor-glow.is-visible {
+  opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor-glow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor-glow {
+    transition: none;
+  }
+}
